@@ -1,6 +1,6 @@
 ---------------- crear router wifi pc ----------------------------
 
-netsh wlan set hostednetwork mode=allow ssid=r_wifi key=22102010jose10
+netsh wlan set hostednetwork mode=allow ssid=name_ssid key=password
 
 ---------------- Activar red wifi  --------------------------------
 
@@ -12,7 +12,7 @@ netsh wlan start hostednetwork
 netsh wlan stop hostednetwork
 
 *********************************************************************
---------------------- configuración Before  -----------
+--------------------- configuraciÃ³n Before  -----------
 1- window + r = control
 2- redes e internet
 3- centro de redes y uso compartido
