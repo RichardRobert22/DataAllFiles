@@ -1,0 +1,24 @@
+---------------- crear router wifi pc ----------------------------
+
+netsh wlan set hostednetwork mode=allow ssid=r_wifi key=22102010jose10
+
+---------------- Activar red wifi  --------------------------------
+
+ 
+netsh wlan start hostednetwork
+
+--------------- Desactivar red wifi ------------------------------
+
+netsh wlan stop hostednetwork
+
+*********************************************************************
+--------------------- configuración Before  -----------
+1- window + r = control
+2- redes e internet
+3- centro de redes y uso compartido
+4- connexiones -> de la red de la que vamos a compartir
+5- uso compartido
+6- seleccionamos las dos opciones -> para compartir
+7- iniciamos el router
+ &#65533;
+
